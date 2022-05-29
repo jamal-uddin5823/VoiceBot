@@ -89,12 +89,15 @@ if __name__ == "__main__":
         
         if 'what can you do' in command:
             command = "I can tell you the current time, play youtube videos, tell a joke, search anything for you"
-            li = command.split(",")
+            li = command.split(", ")
+            
+            
             for i,j in enumerate(li,1):
-                print(i,j,sep=". ")
+                print(i,j.title(),sep=". ")
             talk(command)
 
         elif 'time' in command:
+            print(time_tell())
             talk(time_tell())
 
         elif 'play' in command:
